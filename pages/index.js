@@ -155,7 +155,7 @@ export default function Home() {
       <p class="mt-4 text-lg text-gray-600">Ready to take control of your health and wellness? We're here to help. Book an appointment today to start your journey to a better you.</p>
     </div>
 
-    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 gt">
       <div class="bg-white shadow-md rounded-lg px-8 py-10">
         <h3 class="text-xl font-bold text-gray-900 mb-2">Virtual Consultation</h3>
         <p class="text-gray-700 text-base mb-4">If you prefer to meet with one of our healthcare providers from the comfort of your own home, a virtual consultation may be the right choice for you.</p>
