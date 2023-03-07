@@ -1,28 +1,40 @@
-import fAuth from "../../firebase/clientApp";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useRouter } from 'next/router'
+import fAuth from "@/plugins/clientApp";
+import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 
-const createUser = (email, pass) => {
+export default function Register() {
+  const router = useRouter();
+
+  const createUser = (email, pass) => {
     createUserWithEmailAndPassword(fAuth, email, pass)
     .then((userCredential) => {
-      // console.log("Signed in ", userCredential)
-      alert('registered sucessfully')
+      verifyEmail(email);
+      router.push('/register/verify')
     })
     .catch((error) => {
-      alert('registered error pls try again')
+      alert(error.message)
   });
 }
 
+function verifyEmail  (email) {
+  
+  sendEmailVerification(fAuth.currentUser)
+  .then(() => {
+    window.localStorage.setItem('emailForSignIn', email);
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  });
+}
 function handleSubmit (e) {
   e.preventDefault();
-
   const fields = {
     email: e.target.email.value,
     pass: e.target.password.value,
     confirmPass: e.target['confirm-password'].value
   }
-
   console.log(fields)
-
   if(validateForm(fields)) {
     createUser(fields.email, fields.pass)
   }
@@ -36,7 +48,7 @@ function validateForm (fields) {
   return true;
 }
 
-export default function Register() {
+
   return (
     <>
       <section className="bg-gray-50 light:bg-gray-900">
