@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export default function verify() {
+export default function Verify() {
   const [email, setEmail] = useState('');
   useEffect(() => {
      setEmail(window.localStorage.getItem('emailForSignIn'));
