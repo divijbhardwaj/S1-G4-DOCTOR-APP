@@ -1,9 +1,42 @@
+import Layout from '@/pages/layout';
+
 export default function Appointment() {
+  async function onSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      number: form.phone.value,
+      email: form.email.value,
+      date: form.date.value,
+      time: form.time.value,
+      area: form.area.value,
+      city: form.city.value,
+      state: form.state.value,
+      zip: form['post-code'].value,
+      desc: form.message.value
+    }
+
+    const response = await fetch('http://localhost:3009/book-appointment', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    alert('appoinment booked');
+
+
+    // console.log(response);
+
+  }
   return (<>
-    <section>          
-    <div className="mx-auto w-full max-w-[550px] bg-white">
-        <h2 className="text-3xl font-bold text-gray-900 m-10">Book an Appointment</h2>
-          <form action="#" method="POST">
+    <Layout>
+      <section className='p-5'>          
+        <div className="mx-auto w-full max-w-[550px]">
+          <h2 className="text-3xl font-bold text-gray-900 m-10">Book an Appointment</h2>
+          <form onSubmit={onSubmit}>
             <div className="mb-5">
               <label
                 htmlFor="name"
@@ -144,7 +177,7 @@ export default function Appointment() {
               >
                 Illness Description
               </label>
-              <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your illness here..."></textarea>
+              <textarea name="message" id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your illness here..."></textarea>
 
             </div>
             <div>
@@ -157,5 +190,6 @@ export default function Appointment() {
           </form>
         </div>
       </section>
+    </Layout>
   </>)
 }

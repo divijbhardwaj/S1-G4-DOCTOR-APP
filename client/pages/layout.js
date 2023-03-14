@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
 useEffect(() => {
   onAuthStateChanged(fAuth, (user) => {
     if (user) {
-      console.log(user)
+      // console.log(user)
     } else {
       // User is signed out
       // ...

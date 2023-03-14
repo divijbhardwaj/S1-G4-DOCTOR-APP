@@ -3,9 +3,28 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Layout from '@/pages/layout';
+import { useEffect, useState } from 'react';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function PatientDashboard() {
+
+async function getData(setData) {
+  const response = await fetch('http://localhost:3009/get-appointments', {
+    method: "GET"
+  });
+  const list = await response.json();
+  setData(list)
+  console.log(list);
+}
+
+const [appoinmentData, setAppoinmentData] = useState([]);
+
+useEffect(() => {
+   if(!appoinmentData.length) {
+      getData(setAppoinmentData);
+   }
+}, [appoinmentData])
+
   return (
     <>
    
@@ -53,6 +72,13 @@ export default function PatientDashboard() {
                     <div className="dashboard-widget">
                       <nav className="dashboard-menu">
                         <ul>
+                          <li>
+                            <a href="/appointment">
+                              <i className="fas fa-columns"></i>
+                              <span>Book Appointment</span>
+                            </a>
+                          </li>
+
                           <li className="active">
                             <a href="#">
                               <i className="fas fa-columns"></i>
@@ -126,40 +152,26 @@ export default function PatientDashboard() {
                                     </tr>
                                   </thead>
                                   <tbody>
-                                    <tr>
-                                      <td>
-                                        <h2 className="table-avatar">
-                                          <a href="#" className="avatar avatar-sm mr-2">
-                                            <img className="avatar-img rounded-full" src="/assets/img/doctors/doctor-thumb-01.jpg" alt="User Image"/>
-                                          </a>
-                                          <a href="#">Dr. Ruby Perrin <span>Dental</span></a>
-                                        </h2>
-                                      </td>
-                                      <td>14 Nov 2019 <span className="block text-teal-500">10.00 AM</span></td>
-                                      <td>12 Nov 2019</td>
-                                      <td>$160</td>
-                                      <td>16 Nov 2019</td>
-                                      <td><span className="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded rounded-full py-1 px-3 bg-success-light">Confirm</span></td>
-                                     
-                                    </tr>
-                                  
-                                    
-                                    <tr>
-                                      <td>
-                                        <h2 className="table-avatar">
-                                          <a href="#" className="avatar avatar-sm mr-2">
-                                            <img className="avatar-img rounded-full" src="/assets/img/doctors/doctor-thumb-10.jpg" alt="User Image"/>
-                                          </a>
-                                          <a href="#">Dr. Olga Barlow  <span>Dental</span></a>
-                                        </h2>
-                                      </td>
-                                      <td>5 Nov 2019 <span className="block text-teal-500">5.00 PM</span></td>
-                                      <td>1 Nov 2019</td>
-                                      <td>$100</td>
-                                      <td>7 Nov 2019</td>
-                                      <td><span className="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded rounded-full py-1 px-3 bg-success-light">Confirm</span></td>
-                                     
-                                    </tr>
+                                    { appoinmentData.length ?
+                                      appoinmentData.map((d,i) => 
+                                          <tr>
+                                          <td>
+                                            <h2 className="table-avatar">
+                                              <a href="#" className="avatar avatar-sm mr-2">
+                                                <img className="avatar-img rounded-full" src="/assets/img/doctors/doctor-thumb-01.jpg" alt="User Image"/>
+                                              </a>
+                                              <a href="#">{d.name} <span>Dentist</span></a>
+                                            </h2>
+                                          </td>
+                                          <td>{(new Date(d.date)).toLocaleDateString("en-US")} <span className="block text-teal-500">{d.time}</span></td>
+                                          <td>{(new Date(d.date)).toLocaleDateString("en-US")}</td>
+                                          <td>$160</td>
+                                          <td>16 Nov 2019</td>
+                                          <td><span className="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded rounded-full py-1 px-3 bg-warning-light">Pending</span></td>
+                                        
+                                        </tr> 
+                                      ): <></>
+                                    }
                                   </tbody>
                                 </table>
                               </div>
