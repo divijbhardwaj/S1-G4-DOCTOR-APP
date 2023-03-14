@@ -1,6 +1,23 @@
 import Head from 'next/head'
+import {onAuthStateChanged} from "firebase/auth";
+import fAuth from '@/plugins/firebase'
+import { useEffect } from 'react';
+
+// const auth = getAuth();
+// const user = auth.currentUser;
 
 const Layout = ({ children }) => {
+useEffect(() => {
+  onAuthStateChanged(fAuth, (user) => {
+    if (user) {
+      console.log(user)
+    } else {
+      // User is signed out
+      // ...
+      window.location.href = "/login"
+    }
+  });
+}, [])
   return (
     <>
        <Head>

@@ -20,7 +20,7 @@ function loginFunc(email, password, setEmailVerified) {
       if(!user.emailVerified) {
         alert('Please verify your email')
       } else {
-        window.location.href = "/dashboard"
+        window.location.href = "/dashboard/patient"
       }
     })
     .catch((error) => {
