@@ -70,7 +70,7 @@ useEffect(() => {
 									</div>
 								</div>
 								<div className="dashboard-widget">
-                <nav className="dashboard-menu">
+                                    <nav className="dashboard-menu">
 										<ul>
 											<li >
 												<a href="/dashboard/doctor">
@@ -78,7 +78,7 @@ useEffect(() => {
 													<span>Dashboard</span>
 												</a>
 											</li>
-											<li>
+											<li className="active">
 												<a href="/dashboard/doctor/appointments">
 													<i className="fas fa-calendar-check"></i>
 													<span>Appointments</span>
@@ -110,7 +110,7 @@ useEffect(() => {
 												</a>
 											</li>
 											
-											<li className="active">
+											<li >
 												<a href="/dashboard/doctor/change-password">
 													<i className="fas fa-lock"></i>
 													<span>Change Password</span>
@@ -131,36 +131,64 @@ useEffect(() => {
                 <div class="md:w-3/5 pr-4 pl-4 lg:w-2/3 pr-4 pl-4 xl:w-3/4 pr-4 pl-4 py-2">
                 <div class="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
                 <div class="flex-auto p-6 ">
-
-                <form>
+ 
+                <div className='appointments'>
+                    <div class="appointment-list">
+                    <div class="profile-info-widget">
+                    <a href="patient-profile.html" class="booking-doc-img">
+                    <img src="/assets/img/patients/patient.jpg" alt="User Image"/>
+                    </a>
+                    <div class="profile-det-info">
+                    <h3><a href="patient-profile.html">Richard Wilson</a></h3>
+                    <div class="patient-details">
+                    <h5><i class="far fa-clock"></i> 14 Nov 2019, 10.00 AM</h5>
+                    <h5><i class="fas fa-map-marker-alt"></i> cambridge,Ontario</h5>
+                    <h5><i class="fas fa-envelope"></i> richard@example.com</h5>
+                    <h5 class="mb-0"><i class="fas fa-phone"></i> +1 923 782 4575</h5>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="appointment-action">
+                    <a href="#" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
+                    <i class="far fa-eye"></i> View
+                    </a>
+                    <a href="javascript:void(0);" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-success-light">
+                    <i class="fas fa-check"></i> Accept
+                    </a>
+                    <a href="javascript:void(0);" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-danger-light">
+                    <i class="fas fa-times"></i> Cancel
+                    </a>
+                    </div>
+                    </div>
+                    <div class="appointment-list">
+                    <div class="profile-info-widget">
+                    <a href="patient-profile.html" class="booking-doc-img">
+                    <img src="/assets/img/patients/patient.jpg" alt="User Image"/>
+                    </a>
+                    <div class="profile-det-info">
+                    <h3><a href="patient-profile.html">Richard Wilson</a></h3>
+                    <div class="patient-details">
+                    <h5><i class="far fa-clock"></i> 14 Nov 2019, 10.00 AM</h5>
+                    <h5><i class="fas fa-map-marker-alt"></i> cambridge,Ontario</h5>
+                    <h5><i class="fas fa-envelope"></i> richard@example.com</h5>
+                    <h5 class="mb-0"><i class="fas fa-phone"></i> +1 923 782 4575</h5>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="appointment-action">
+                    <a href="#" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
+                    <i class="far fa-eye"></i> View
+                    </a>
+                    <a href="javascript:void(0);" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-success-light">
+                    <i class="fas fa-check"></i> Accept
+                    </a>
+                    <a href="javascript:void(0);" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-danger-light">
+                    <i class="fas fa-times"></i> Cancel
+                    </a>
+                    </div>
+                    </div>
+                </div>
               
-               
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
-                <label>Old Password</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value=""/>
-                </div>
-                </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4 ">
-                <label>New Password</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value=""/>
-                </div>
-                </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4 ">
-                <label>Confirm Password</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value=""/>
-                </div>
-                
-                
-                
-            
-                </div>
-                <div class="submit-section pr-4 pl-4">
-                <button type="submit" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600 submit-btn">Save Changes</button>
-                </div>
-                </form>
 
                 </div>
                 </div>

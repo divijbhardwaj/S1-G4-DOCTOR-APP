@@ -70,16 +70,16 @@ useEffect(() => {
 									</div>
 								</div>
 								<div className="dashboard-widget">
-									<nav className="dashboard-menu">
+                <nav className="dashboard-menu">
 										<ul>
 											<li >
-												<a href="#">
+												<a href="/dashboard/doctor">
 													<i className="fas fa-columns"></i>
 													<span>Dashboard</span>
 												</a>
 											</li>
 											<li>
-												<a href="#">
+												<a href="/dashboard/doctor/appointments">
 													<i className="fas fa-calendar-check"></i>
 													<span>Appointments</span>
 												</a>
@@ -97,27 +97,27 @@ useEffect(() => {
 												</a>
 											</li>
 											<li>
-												<a href="#">
+												<a href="/dashboard/doctor/invoices">
 													<i className="fas fa-file-invoice"></i>
 													<span>Invoices</span>
 												</a>
 											</li>
 											
-											<li className="active">
+											<li  className="active">
 												<a href="/dashboard/doctor/profile-setting">
 													<i className="fas fa-user-cog"></i>
 													<span>Profile Settings</span>
 												</a>
 											</li>
 											
-											<li >
+											<li>
 												<a href="/dashboard/doctor/change-password">
 													<i className="fas fa-lock"></i>
 													<span>Change Password</span>
 												</a>
 											</li>
 											<li>
-												<a href="#">
+												<a href="/logout">
 													<i className="fas fa-sign-out-alt"></i>
 													<span>Logout</span>
 												</a>
@@ -133,12 +133,12 @@ useEffect(() => {
                 <div class="flex-auto p-6 ">
 
                 <form>
-                <div class="flex flex-wrap  flex flex-wrap -mr-1 -ml-1">
+                <div class="flex flex-wrap  flex flex-wrap -mr-1 -ml-1 ">
                 <div class="w-full md:w-full pr-4 pl-4">
                 <div class="mb-4">
                 <div class="change-avatar">
                 <div class="profile-img">
-                <img src="/assets/img/patients/patient.jpg" alt="User Image"/>
+                <img src="/assets/img/doctors/doctor-thumb-02.jpg" alt="User Image"/>
                 </div>
                 <div class="upload-img">
                 <div class="change-photo-btn">
@@ -150,87 +150,65 @@ useEffect(() => {
                 </div>
                 </div>
                 </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
-                <label>First Name</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="Richard"/>
-                </div>
-                </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4 ">
-                <label>Last Name</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="Wilson"/>
-                </div>
-                </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
-                <label>Date of Birth</label>
-                <div class="cal-icon">
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded " value="24-07-1983"/>
-                </div>
-                </div>
-                </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
-                <label>Blood Group</label>
-                <select class="form-select block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded">
-                <option>A-</option>
-                <option>A+</option>
-                <option>B-</option>
-                <option>B+</option>
-                <option>AB-</option>
-                <option>AB+</option>
-                <option>O-</option>
-                <option>O+</option>
-                </select>
-                </div>
-                </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
-                <label>Email ID</label>
-                <input type="email" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="richard@example.com"/>
-                </div>
-                </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
-                <label>Mobile</label>
-                <input type="text" value="+1 202-555-0125" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"/>
-                </div>
-                </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
-                <label>Address</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="806 Twin Willow Lane"/>
-                </div>
-                </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
-                <label>City</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="Old Forge"/>
-                </div>
-                </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
-                <label>State</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="Cambridge"/>
-                </div>
-                </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
-                <label>Zip Code</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="13420"/>
-                </div>
-                </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
-                <label>Country</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="Canada"/>
-                </div>
-                </div>
-                </div>
-                <div class="submit-section pr-4 pl-4">
-                <button type="submit" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600 submit-btn">Save Changes</button>
-                </div>
+                <div class="md:w-1/2 pr-4 pl-4">
+                  <div class="mb-4">
+                  <label>Username <span class="text-red-600">*</span></label>
+                  <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" readonly=""/>
+                  </div>
+                  </div>
+                  <div class="md:w-1/2 pr-4 pl-4">
+                  <div class="mb-4">
+                  <label>Email <span class="text-red-600">*</span></label>
+                  <input type="email" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" readonly=""/>
+                  </div>
+                  </div>
+                  <div class="md:w-1/2 pr-4 pl-4">
+                  <div class="mb-4">
+                  <label>First Name <span class="text-red-600">*</span></label>
+                  <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"/>
+                  </div>
+                  </div>
+                  <div class="md:w-1/2 pr-4 pl-4">
+                  <div class="mb-4">
+                  <label>Last Name <span class="text-red-600">*</span></label>
+                  <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"/>
+                  </div>
+                  </div>
+                  <div class="md:w-1/2 pr-4 pl-4">
+                  <div class="mb-4">
+                  <label>Phone Number</label>
+                  <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"/>
+                  </div>
+                  </div>
+                  <div class="md:w-1/2 pr-4 pl-4">
+                  <div class="mb-4">
+                  <label>Gender</label>
+                  <select class=" block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded " >
+                  <option >Select</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  </select>
+                  </div>
+                  </div>
+                  <div class="md:w-1/2 pr-4 pl-4">
+                  <div class="mb-4 mb-0">
+                  <label>Date of Birth</label>
+                  <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"/>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
+                  <div class="flex-auto p-6">
+                  <h4 class="mb-3">About Me</h4>
+                  <div class="mb-4 mb-0">
+                  <label>Biography</label>
+                  <textarea class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" rows="5"></textarea>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="submit-section mt-4">
+                  <button type="submit" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600 submit-btn">Save Changes</button>
+                  </div>
                 </form>
 
                 </div>

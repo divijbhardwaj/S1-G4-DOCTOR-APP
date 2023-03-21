@@ -54,13 +54,13 @@ export default function DoctorDashboard() {
 									<nav className="dashboard-menu">
 										<ul>
 											<li className="active">
-												<a href="#">
+												<a href="/dashboard/doctor">
 													<i className="fas fa-columns"></i>
 													<span>Dashboard</span>
 												</a>
 											</li>
 											<li>
-												<a href="#">
+												<a href="/dashboard/doctor/appointments">
 													<i className="fas fa-calendar-check"></i>
 													<span>Appointments</span>
 												</a>
@@ -78,27 +78,27 @@ export default function DoctorDashboard() {
 												</a>
 											</li>
 											<li>
-												<a href="#">
+												<a href="/dashboard/doctor/invoices">
 													<i className="fas fa-file-invoice"></i>
 													<span>Invoices</span>
 												</a>
 											</li>
 											
 											<li>
-												<a href="#">
+												<a href="/dashboard/doctor/profile-setting">
 													<i className="fas fa-user-cog"></i>
 													<span>Profile Settings</span>
 												</a>
 											</li>
 											
 											<li>
-												<a href="#">
+												<a href="/dashboard/doctor/change-password">
 													<i className="fas fa-lock"></i>
 													<span>Change Password</span>
 												</a>
 											</li>
 											<li>
-												<a href="#">
+												<a href="/logout">
 													<i className="fas fa-sign-out-alt"></i>
 													<span>Logout</span>
 												</a>

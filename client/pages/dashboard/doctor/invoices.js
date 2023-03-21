@@ -1,3 +1,5 @@
+
+
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
@@ -96,7 +98,7 @@ useEffect(() => {
 													<span>Schedule Timings</span>
 												</a>
 											</li>
-											<li>
+											<li className="active">
 												<a href="/dashboard/doctor/invoices">
 													<i className="fas fa-file-invoice"></i>
 													<span>Invoices</span>
@@ -110,7 +112,7 @@ useEffect(() => {
 												</a>
 											</li>
 											
-											<li className="active">
+											<li >
 												<a href="/dashboard/doctor/change-password">
 													<i className="fas fa-lock"></i>
 													<span>Change Password</span>
@@ -130,38 +132,73 @@ useEffect(() => {
                 
                 <div class="md:w-3/5 pr-4 pl-4 lg:w-2/3 pr-4 pl-4 xl:w-3/4 pr-4 pl-4 py-2">
                 <div class="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
-                <div class="flex-auto p-6 ">
+                <div class="flex-auto p-6 card-table">
 
-                <form>
-              
-               
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
-                <label>Old Password</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value=""/>
-                </div>
-                </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4 ">
-                <label>New Password</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value=""/>
-                </div>
-                </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4 ">
-                <label>Confirm Password</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value=""/>
-                </div>
-                
-                
-                
-            
-                </div>
-                <div class="submit-section pr-4 pl-4">
-                <button type="submit" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600 submit-btn">Save Changes</button>
-                </div>
-                </form>
-
+                <div class=" table-responsive block w-full overflow-auto scrolling-touch">
+                    <table class="table  mb-4 bg-transparent table-hover table-center mb-0">
+                    <thead>
+                    <tr>
+                    <th>Invoice No</th>
+                    <th>Patient</th>
+                    <th>Amount</th>
+                    <th>Paid On</th>
+                    <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr className='p-3'>
+                    <td>
+                    <a href="invoice-view">#INV-0010</a>
+                    </td>
+                    <td>
+                    <h2 class="table-avatar">
+                    <a href="patient-profile.html" class="avatar avatar-sm me-2">
+                    <img class="avatar-img rounded-full" src="/assets/img/patients/patient.jpg" alt="User Image"/>
+                    </a>
+                    <a href="patient-profile.html">Richard Wilson <span>#PT0016</span></a>
+                    </h2>
+                    </td>
+                    <td>$450</td>
+                    <td>14 Nov 2019</td>
+                    <td class="text-end">
+                    <div class="table-action">
+                    <a href="invoice-view.html" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-info-light">
+                    <i class="far fa-eye"></i> View
+                    </a>
+                    <a href="javascript:void(0);" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-primary-light">
+                    <i class="fas fa-print"></i> Print
+                    </a>
+                    </div>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                    <a href="invoice-view">#INV-0010</a>
+                    </td>
+                    <td >
+                    <h2 class="table-avatar">
+                    <a href="patient-profile.html" class="avatar avatar-sm me-2">
+                    <img class="avatar-img rounded-full" src="/assets/img/patients/patient.jpg" alt="User Image"/>
+                    </a>
+                    <a href="patient-profile.html">Richard Wilson <span>#PT0016</span></a>
+                    </h2>
+                    </td>
+                    <td>$450</td>
+                    <td>14 Nov 2019</td>
+                    <td class="text-end">
+                    <div class="table-action">
+                    <a href="invoice-view.html" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-info-light">
+                    <i class="far fa-eye"></i> View
+                    </a>
+                    <a href="javascript:void(0);" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-primary-light">
+                    <i class="fas fa-print"></i> Print
+                    </a>
+                    </div>
+                    </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    </div>
                 </div>
                 </div>
                 </div>
