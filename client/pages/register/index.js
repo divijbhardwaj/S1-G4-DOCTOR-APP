@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router'
 import fAuth from "@/plugins/firebase";
 import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import Layout from '@/pages/layout';
+
 
 export default function Register() {
   const router = useRouter();
@@ -51,6 +53,7 @@ function validateForm (fields) {
 
   return (
     <>
+    <Layout>
       <section className="bg-gray-50 light:bg-gray-900">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <div className="w-full bg-white rounded-lg shadow light:border md:mt-0 sm:max-w-md xl:p-0 light:bg-gray-800 light:border-gray-700">
@@ -88,6 +91,7 @@ function validateForm (fields) {
             </div>
         </div>
       </section>
+      </Layout>
     </>
   )
 }

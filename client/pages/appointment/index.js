@@ -33,6 +33,21 @@ export default function Appointment() {
   }
   return (<>
     <Layout>
+    <div className="breadcrumb-bar">
+				<div className="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4">
+					<div className="flex flex-wrap  items-center">
+						<div className="md:w-full pr-4 pl-4 w-full">
+							<nav aria-label="breadcrumb" className="page-breadcrumb">
+								<ol className="flex flex-wrap list-reset pt-3 pb-3 py-4 px-4 mb-4 bg-gray-200 rounded">
+									<li className="inline-block px-2 py-2 text-gray-700"><a href="/">Home /</a></li>
+									<li className="inline-block px-2 py-2 text-gray-700 active" aria-current="page">Booking</li>
+								</ol>
+							</nav>
+							<h2 className="breadcrumb-title">Book an Appoinment</h2>
+						</div>
+					</div>
+				</div>
+			</div>
       <section className='p-5'>          
         <div className="mx-auto w-full max-w-[550px]">
           <h2 className="text-3xl font-bold text-gray-900 m-10">Book an Appointment</h2>
@@ -182,7 +197,7 @@ export default function Appointment() {
             </div>
             <div>
               <button
-                className="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                className="hover:shadow-form w-full rounded-md bg-blue-500 py-3 px-8 text-center text-base font-semibold text-white outline-none"
               >
                 Book Appointment
               </button>
