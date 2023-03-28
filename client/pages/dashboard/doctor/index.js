@@ -5,7 +5,7 @@ import styles from '@/styles/Home.module.css'
 import Layout from '@/pages/layout';
 const inter = Inter({ subsets: ['latin'] })
 
-export default function PatientDashboard() {
+export default function DoctorDashboard() {
   return (
     <>
    
@@ -18,7 +18,7 @@ export default function PatientDashboard() {
 						<div className="md:w-full pr-4 pl-4 w-full">
 							<nav aria-label="breadcrumb" className="page-breadcrumb">
 								<ol className="flex flex-wrap list-reset pt-3 pb-3 py-4 px-4 mb-4 bg-gray-200 rounded">
-									<li className="inline-block px-2 py-2 text-gray-700"><a href="#">Home</a></li>
+									<li className="inline-block px-2 py-2 text-gray-700"><a href="#">Home /</a></li>
 									<li className="inline-block px-2 py-2 text-gray-700 active" aria-current="page">Dashboard</li>
 								</ol>
 							</nav>
@@ -54,13 +54,13 @@ export default function PatientDashboard() {
 									<nav className="dashboard-menu">
 										<ul>
 											<li className="active">
-												<a href="#">
+												<a href="/dashboard/doctor">
 													<i className="fas fa-columns"></i>
 													<span>Dashboard</span>
 												</a>
 											</li>
 											<li>
-												<a href="#">
+												<a href="/dashboard/doctor/appointments">
 													<i className="fas fa-calendar-check"></i>
 													<span>Appointments</span>
 												</a>
@@ -78,27 +78,27 @@ export default function PatientDashboard() {
 												</a>
 											</li>
 											<li>
-												<a href="#">
+												<a href="/dashboard/doctor/invoices">
 													<i className="fas fa-file-invoice"></i>
 													<span>Invoices</span>
 												</a>
 											</li>
 											
 											<li>
-												<a href="#">
+												<a href="/dashboard/doctor/profile-setting">
 													<i className="fas fa-user-cog"></i>
 													<span>Profile Settings</span>
 												</a>
 											</li>
 											
 											<li>
-												<a href="#">
+												<a href="/dashboard/doctor/change-password">
 													<i className="fas fa-lock"></i>
 													<span>Change Password</span>
 												</a>
 											</li>
 											<li>
-												<a href="#">
+												<a href="/logout">
 													<i className="fas fa-sign-out-alt"></i>
 													<span>Logout</span>
 												</a>

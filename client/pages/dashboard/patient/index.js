@@ -37,7 +37,7 @@ useEffect(() => {
                 <div className="md:w-full pr-4 pl-4 w-full">
                   <nav aria-label="breadcrumb" className="page-breadcrumb">
                     <ol className="flex flex-wrap list-reset pt-3 pb-3 py-4 px-4 mb-4 bg-gray-200 rounded">
-                      <li className="inline-block px-2 py-2 text-gray-700"><a href="/">Home</a></li>
+                      <li className="inline-block px-2 py-2 text-gray-700"><a href="/">Home /</a></li>
                       <li className="inline-block px-2 py-2 text-gray-700 active" aria-current="page">Dashboard</li>
                     </ol>
                   </nav>
@@ -70,7 +70,7 @@ useEffect(() => {
                       </div>
                     </div>
                     <div className="dashboard-widget">
-                      <nav className="dashboard-menu">
+                    <nav className="dashboard-menu">
                         <ul>
                           <li>
                             <a href="/appointment">
@@ -79,28 +79,28 @@ useEffect(() => {
                             </a>
                           </li>
 
-                          <li className="active">
-                            <a href="#">
+                          <li className="active" >
+                            <a href="/dashboard/patient">
                               <i className="fas fa-columns"></i>
                               <span>Dashboard</span>
                             </a>
                           </li>
                          
                           
-                          <li>
-                            <a href="#">
+                          <li >
+                            <a href="/dashboard/patient/profile-setting">
                               <i className="fas fa-user-cog"></i>
                               <span>Profile Settings</span>
                             </a>
                           </li>
-                          <li>
-                            <a href="#">
+                          <li >
+                            <a href="/dashboard/patient/change-password">
                               <i className="fas fa-lock"></i>
                               <span>Change Password</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#">
+                            <a href="logout">
                               <i className="fas fa-sign-out-alt"></i>
                               <span>Logout</span>
                             </a>
@@ -112,7 +112,7 @@ useEffect(() => {
                   </div>
                 </div>
                 
-                <div className="md:w-3/5 pr-4 pl-4 lg:w-2/3 pr-4 pl-4 xl:w-3/4 pr-4 pl-4">
+                <div className="md:w-3/5 pr-4 pl-4 lg:w-2/3 pr-4 pl-4 xl:w-3/4 pr-4 pl-4 py-2">
                   <div className="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
                     <div className="flex-auto p-6 pt-0">
                       <nav className="user-tabs mb-4">
