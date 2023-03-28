@@ -148,6 +148,7 @@ useEffect(() => {
                                       <th>Amount</th>
                                       <th>Follow Up</th>
                                       <th>Status</th>
+                                      <th>Report</th>
                                     
                                     </tr>
                                   </thead>
@@ -167,7 +168,10 @@ useEffect(() => {
                                           <td>{(new Date(d.date)).toLocaleDateString("en-US")}</td>
                                           <td>$160</td>
                                           <td>16 Nov 2019</td>
-                                          <td><span className="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded rounded-full py-1 px-3 bg-warning-light">Pending</span></td>
+                                          <td><span className="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded rounded-full py-1 px-3 bg-warning-light">{d.report? 'Complete' : 'Pending'}</span></td>
+                                          <td>
+                                            <a>Report</a>
+                                          </td>
                                         </tr> 
                                       ): <></>
                                     }

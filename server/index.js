@@ -1,7 +1,13 @@
-const express = require('express')
-const bodyParser = require('body-parser')
+require('dotenv').config();
+const express = require('express');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const { Configuration, OpenAIApi } = require("openai");
 
+const configuration = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+const openai = new OpenAIApi(configuration);
 const Patient = require('./model/patient.js');
 const app = express()
 const port = 3009
@@ -39,6 +45,25 @@ app.get('/get-appointments', async(req, res) => {
   console.log(r)
 
   res.json(r);
+})
+
+app.get('/report', async(req, res) => {
+  const _id = req.query.id;
+  const [details] = await Patient.find({_id});
+  const {desc: illnessDesc, report} = details;
+  if(report) {
+    return res.json({report});
+  }
+  const response = await openai.createChatCompletion({
+    model:"gpt-3.5-turbo",
+    messages:[
+      {"role": "system", "content": "Generate a doctors report based on the patient illness"},
+      {"role": "user", "content": `Following is the illness: ${illnessDesc}`}
+    ]
+  });
+  const r = response.data.choices;
+  const user = await Patient.findByIdAndUpdate(_id,{ report: r[0].message.content })
+  res.json({report: r[0].message.content})
 })
 
 app.listen(port, () => {

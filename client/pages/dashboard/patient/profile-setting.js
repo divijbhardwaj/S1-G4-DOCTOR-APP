@@ -112,52 +112,52 @@ useEffect(() => {
                   </div>
                 </div>
                 
-                <div class="md:w-3/5 pr-4 pl-4 lg:w-2/3 pr-4 pl-4 xl:w-3/4 pr-4 pl-4 py-2">
-                <div class="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
-                <div class="flex-auto p-6 ">
+                <div className="md:w-3/5 pr-4 pl-4 lg:w-2/3 pr-4 pl-4 xl:w-3/4 pr-4 pl-4 py-2">
+                <div className="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
+                <div className="flex-auto p-6 ">
 
                 <form>
-                <div class="flex flex-wrap  flex flex-wrap -mr-1 -ml-1">
-                <div class="w-full md:w-full pr-4 pl-4">
-                <div class="mb-4">
-                <div class="change-avatar">
-                <div class="profile-img">
+                <div className="flex flex-wrap  flex flex-wrap -mr-1 -ml-1">
+                <div className="w-full md:w-full pr-4 pl-4">
+                <div className="mb-4">
+                <div className="change-avatar">
+                <div className="profile-img">
                 <img src="/assets/img/patients/patient.jpg" alt="User Image"/>
                 </div>
-                <div class="upload-img">
-                <div class="change-photo-btn">
-                <span><i class="fa fa-upload"></i> Upload Photo</span>
-                <input type="file" class="upload"/>
+                <div className="upload-img">
+                <div className="change-photo-btn">
+                <span><i className="fa fa-upload"></i> Upload Photo</span>
+                <input type="file" className="upload"/>
                 </div>
-                <small class="block mt-1 text-gray-700">Allowed JPG, GIF or PNG. Max size of 2MB</small>
-                </div>
-                </div>
+                <small className="block mt-1 text-gray-700">Allowed JPG, GIF or PNG. Max size of 2MB</small>
                 </div>
                 </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
+                </div>
+                </div>
+                <div className="w-full md:w-1/2 pr-4 pl-4">
+                <div className="mb-4">
                 <label>First Name</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="Richard"/>
+                <input type="text" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="Richard"/>
                 </div>
                 </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4 ">
+                <div className="w-full md:w-1/2 pr-4 pl-4">
+                <div className="mb-4 ">
                 <label>Last Name</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="Wilson"/>
+                <input type="text" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="Wilson"/>
                 </div>
                 </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
+                <div className="w-full md:w-1/2 pr-4 pl-4">
+                <div className="mb-4">
                 <label>Date of Birth</label>
-                <div class="cal-icon">
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded " value="24-07-1983"/>
+                <div className="cal-icon">
+                <input type="text" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded " value="24-07-1983"/>
                 </div>
                 </div>
                 </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
+                <div className="w-full md:w-1/2 pr-4 pl-4">
+                <div className="mb-4">
                 <label>Blood Group</label>
-                <select class="form-select block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded">
+                <select className="form-select block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded">
                 <option>A-</option>
                 <option>A+</option>
                 <option>B-</option>
@@ -169,51 +169,51 @@ useEffect(() => {
                 </select>
                 </div>
                 </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
+                <div className="w-full md:w-1/2 pr-4 pl-4">
+                <div className="mb-4">
                 <label>Email ID</label>
-                <input type="email" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="richard@example.com"/>
+                <input type="email" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="richard@example.com"/>
                 </div>
                 </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
+                <div className="w-full md:w-1/2 pr-4 pl-4">
+                <div className="mb-4">
                 <label>Mobile</label>
-                <input type="text" value="+1 202-555-0125" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"/>
+                <input type="text" value="+1 202-555-0125" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"/>
                 </div>
                 </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
+                <div className="w-full md:w-1/2 pr-4 pl-4">
+                <div className="mb-4">
                 <label>Address</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="806 Twin Willow Lane"/>
+                <input type="text" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="806 Twin Willow Lane"/>
                 </div>
                 </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
+                <div className="w-full md:w-1/2 pr-4 pl-4">
+                <div className="mb-4">
                 <label>City</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="Old Forge"/>
+                <input type="text" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="Old Forge"/>
                 </div>
                 </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
+                <div className="w-full md:w-1/2 pr-4 pl-4">
+                <div className="mb-4">
                 <label>State</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="Cambridge"/>
+                <input type="text" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="Cambridge"/>
                 </div>
                 </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
+                <div className="w-full md:w-1/2 pr-4 pl-4">
+                <div className="mb-4">
                 <label>Zip Code</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="13420"/>
+                <input type="text" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="13420"/>
                 </div>
                 </div>
-                <div class="w-full md:w-1/2 pr-4 pl-4">
-                <div class="mb-4">
+                <div className="w-full md:w-1/2 pr-4 pl-4">
+                <div className="mb-4">
                 <label>Country</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="Canada"/>
+                <input type="text" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" value="Canada"/>
                 </div>
                 </div>
                 </div>
-                <div class="submit-section pr-4 pl-4">
-                <button type="submit" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600 submit-btn">Save Changes</button>
+                <div className="submit-section pr-4 pl-4">
+                <button type="submit" className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600 submit-btn">Save Changes</button>
                 </div>
                 </form>
 

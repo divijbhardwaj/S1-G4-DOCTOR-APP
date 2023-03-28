@@ -10,7 +10,8 @@ const PatientSchema = new Schema({
     city: String,
     state: String,
     zip: String,
-    desc: String
+    desc: String,
+    report: String
 });
 const Patient = mongoose.model('Patient', PatientSchema, "patients");
 module.exports = Patient;
