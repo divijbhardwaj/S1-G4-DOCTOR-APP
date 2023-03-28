@@ -154,7 +154,7 @@ useEffect(() => {
                                   <tbody>
                                     { appoinmentData.length ?
                                       appoinmentData.map((d,i) => 
-                                          <tr>
+                                        <tr key={i}>
                                           <td>
                                             <h2 className="table-avatar">
                                               <a href="#" className="avatar avatar-sm mr-2">
@@ -168,7 +168,6 @@ useEffect(() => {
                                           <td>$160</td>
                                           <td>16 Nov 2019</td>
                                           <td><span className="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded rounded-full py-1 px-3 bg-warning-light">Pending</span></td>
-                                        
                                         </tr> 
                                       ): <></>
                                     }
