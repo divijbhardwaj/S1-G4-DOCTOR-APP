@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
   const route = useRouter();
 useEffect(() => {
   onAuthStateChanged(fAuth, (user) => {
-    if (user || route.pathname === '/login') {
+    if (user || ['/login', '/'].includes(route.pathname)) {
       // console.log(user)
     } else {
       // User is signed out
