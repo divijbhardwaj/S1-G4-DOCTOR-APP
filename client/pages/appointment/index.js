@@ -183,6 +183,18 @@ export default function Appointment() {
                     />
                   </div>
                 </div>
+                <label className="mb-5 block text-base font-semibold text-[#07074D] sm:text-xl" >
+                Doctor Details
+              </label>
+                <div className="w-full px-3 sm:w-1/2">
+                  <div className="mb-5">
+                    <select>
+                    <option>Choose Doctor</option>
+                      <option>James</option>
+                      <option>Robert</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="mb-5">

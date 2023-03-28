@@ -2002,6 +2002,9 @@ html.menu-opened body {
 	13. Footer
 -----------------------*/
 
+.website-color {
+    background-color: #15558d;
+}
 .footer {
     background-color: #15558d;
 }
@@ -2336,7 +2339,7 @@ html.menu-opened body {
 	padding: 80px 0;
 }
 .slick-dots {
-    position: absolute;
+    
     bottom: -25px;
     display: block;
     width: 100%;
