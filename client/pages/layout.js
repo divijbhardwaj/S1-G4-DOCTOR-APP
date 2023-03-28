@@ -2,14 +2,16 @@ import Head from 'next/head'
 import {onAuthStateChanged} from "firebase/auth";
 import fAuth from '@/plugins/firebase'
 import { useEffect } from 'react';
+import { useRouter } from 'next/router'
 
 // const auth = getAuth();
 // const user = auth.currentUser;
 
 const Layout = ({ children }) => {
+  const route = useRouter();
 useEffect(() => {
   onAuthStateChanged(fAuth, (user) => {
-    if (user) {
+    if (user || route.pathname === '/login') {
       // console.log(user)
     } else {
       // User is signed out
