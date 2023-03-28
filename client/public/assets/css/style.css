@@ -2002,6 +2002,9 @@ html.menu-opened body {
 	13. Footer
 -----------------------*/
 
+.website-color {
+    background-color: #15558d;
+}
 .footer {
     background-color: #15558d;
 }
