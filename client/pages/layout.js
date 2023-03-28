@@ -31,9 +31,10 @@ useEffect(() => {
 		    <script src="/assets/js/popper.min.js"></script>
         <script src="/assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
         <script src="/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
-        
+        <script src="/assets/js/slick.js"></script>
         <script src="/assets/js/circle-progress.min.js"></script>
 		    <script src="/assets/js/script.js"></script>
+
         
       </Head>
      
@@ -42,7 +43,7 @@ useEffect(() => {
             <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <a href="/" className="flex items-center">
                   
-                <img src="/assets/img/logo.png" className="img-fluid" width="30"/>
+                <img src="/assets/img/logo.png" className="img-fluid" width="30" alt="logo"/>
                     <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">DocApp</span>
                 </a>
                 <div className="flex items-center lg:order-2">
@@ -85,11 +86,12 @@ useEffect(() => {
 				<div className="footer-top">
 					<div className="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4">
 						<div className="flex flex-wrap ">
-							<div className="lg:w-1/4 pr-4 pl-4 md:w-1/2 pr-4 pl-4">
+							<div className="lg:w-1/4 pr-4 pl-4 sm:w-1/1 ">
                 <div className="footer-widget footer-about">
                     
                     <div className="footer-about-content">
-                      <h1 className="text-white font-bold mb-2"><img src="/assets/img/logo.png" className="img-fluid" width="50"/></h1>
+                      <h1 className="text-white font-bold mb-2">
+                        <img src="/assets/img/logo.png" className="img-fluid" width="50"/></h1>
                       
                       <p className="tex-white">Conestoga, Doon valley campus</p>
                       <p className="tex-white">(123) 456-7890</p>
@@ -97,39 +99,43 @@ useEffect(() => {
                     </div>
                     </div>
                </div> 
-            <div className="lg:w-1/4 pr-4 pl-4 md:w-1/2 pr-4 pl-4">
-              <div className="footer-widget footer-menu">
-                <h3 className="text-white font-bold mb-2">Opening Hours</h3>
-                <ul>
-                  <li className="text-white"> Monday - Friday: 8am to 7pm</li>
-                  <li className="text-white">Saturday - Sunday:Closed</li>
-                  <li className="text-white">Public Holidays: Closed</li>
-                </ul>
-              </div>
-            </div>
-            <div className="lg:w-1/4 pr-4 pl-4 md:w-1/2 pr-4 pl-4">
-            <div className="footer-widget footer-menu">
-              <h3 className="text-white font-bold mb-2">Quick Links</h3>
-              <ul >
-                <li><a href="#" className="tex-white hover:text-white"> <i className="fas fa-angle-double-right"></i>About Us</a></li>
-                <li><a href="#" className="tex-white hover:text-white"> <i className="fas fa-angle-double-right"></i>Services</a></li>
-                <li><a href="#" className="tex-white hover:text-white"><i className="fas fa-angle-double-right"></i>Doctors</a></li>
-                <li><a href="#" className="tex-white hover:text-white"><i className="fas fa-angle-double-right"></i>Contact</a></li>
-              </ul>
-            </div>
-            </div>
-            <div className="lg:w-1/4 pr-4 pl-4 md:w-1/2 pr-4 pl-4">
-              <h3 className="text-white font-bold mb-2">Newsletter</h3>
-              <p className="text-white mb-4">Subscribe to our newsletter to receive updates and news about our hospital.</p>
-              <form className="mb-4">
-                <div className="flex items-center border-b border-b-2 border-gray-500 py-2">
-                  <input className="appearance-none bg-transparent border-none w-full  mr-3 py-1 px-2 leading-tight focus:outline-none" type="email" placeholder="Your email address" aria-label="Email address"/>
-                  <button className="flex-shrink-0 bg-white hover:bg-gray-100 border-white hover:border-gray-200 text-gray-800 font-semibold py-1 px-2 border rounded" type="button">
-                    Subscribe
-                  </button>
+                <div className="lg:w-1/4 pr-4 pl-4  sm:w-1/1 ">
+                  <div className="footer-widget footer-menu">
+                  <div className="footer-about-content">
+                    <h3 className="text-white font-bold mb-2">Opening Hours</h3>
+                    <ul>
+                      <li className="text-white"> Monday - Friday: 8am to 7pm</li>
+                      <li className="text-white">Saturday - Sunday:Closed</li>
+                      <li className="text-white">Public Holidays: Closed</li>
+                    </ul>
+                    </div>
+                  </div>
                 </div>
-              </form>
-          </div>
+                <div className="lg:w-1/4 pr-4 pl-4  sm:w-1/1 ">
+                <div className="footer-widget footer-menu ">
+                <div className="footer-about-content">
+                  <h3 className="text-white font-bold mb-2">Quick Links</h3>
+                  <ul >
+                    <li><a href="#" className="tex-white hover:text-white"> <i className="fas fa-angle-double-right"></i>About Us</a></li>
+                    <li><a href="#" className="tex-white hover:text-white"> <i className="fas fa-angle-double-right"></i>Services</a></li>
+                    <li><a href="#" className="tex-white hover:text-white"><i className="fas fa-angle-double-right"></i>Doctors</a></li>
+                    <li><a href="#" className="tex-white hover:text-white"><i className="fas fa-angle-double-right"></i>Contact</a></li>
+                  </ul>
+                </div>
+                </div>
+                </div>
+                <div className="lg:w-1/4 pr-4 pl-4  sm:w-1/1 ">
+                  <h3 className="text-white font-bold mb-2">Newsletter</h3>
+                  <p className="text-white mb-4">Subscribe to our newsletter to receive updates and news about our hospital.</p>
+                  <form className="mb-4">
+                    <div className="flex items-center border-b border-b-2 border-gray-500 py-2">
+                      <input className="appearance-none bg-transparent border-none w-full  mr-3 py-1 px-2 leading-tight focus:outline-none" type="email" placeholder="Your email address" aria-label="Email address"/>
+                      <button className="flex-shrink-0 bg-white hover:bg-gray-100 border-white hover:border-gray-200 text-gray-800 font-semibold py-1 px-2 border rounded" type="button">
+                        Subscribe
+                      </button>
+                    </div>
+                  </form>
+              </div>
                 </div>
               </div>
 

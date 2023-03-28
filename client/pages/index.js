@@ -13,15 +13,13 @@ export default function Home() {
       
         <div className="bg-cover bg-center ">
           <div className="flex flex-col justify-center items-start h-full px-8 ">
-            <h1 className="text-4xl lg:text-5xl font-bold text-black ">Experience quality <br></br>healthcare services</h1>
-            <p className="text-lg lg:text-xl text-black mb-8 py-8">Our team of skilled medical professionals is dedicated to providing
+            <h1 className=" lg:text-5xl sm:text-2xl font-bold text-black ">Experience quality <br></br>healthcare services</h1>
+            <p className="lg:text-xl sm-text-xl  text-black mb-8 py-8">Our team of skilled medical professionals is dedicated to providing
                       <br></br>  exceptional are to help you achieve and maintain optimal health.</p>
             <a href="/appointment" className="px-4 py-2 text-white no-underline bg-blue-500 rounded hover:bg-blue-600">Book Appointment</a>
            
           </div>
         </div>
-
-
         
         <div className="w-full hidden lg:block bg-gray-50 border rounded-lg shadow-sm overflow-hidden">
           <div className="max-w-screen-lg flex items-center gap-8 p-10 mx-auto">
@@ -90,22 +88,23 @@ export default function Home() {
               <div className="flex justify-between items-center bg-white gap-2 p-3">
                 <p className="text-gray-500 text-sm">Experience quality healthcare services</p>
 
-                <a href="#" className="inline-block shrink-0 bg-white hover:bg-gray-50 active:bg-gray-100 focus-visible:ring ring-indigo-300 text-indigo-500 text-sm font-semibold border rounded-lg outline-none transition duration-100 px-3 py-1">More</a>
+                <a href="#" className="inline-block shrink-0 bg-white hover:bg-gray-50 active:bg-gray-100 focus-visible:ring  text-sm font-semibold border rounded-lg outline-none transition duration-100 px-3 py-1">More</a>
               </div>
             </div>
           
           </div>
         </div>
+        
         <div className="bg-gray-100 py-12">
-  <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="lg:text-center">
-      <h2 className="text-3xl font-bold text-gray-900">Book an Appointment</h2>
-      <p className="mt-4 text-lg text-gray-600">Ready to take control of your health and wellness? We're here to help. Book an appointment today to start your journey to a better you.</p>
-    </div>
+          <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="lg:text-center">
+              <h2 className="text-3xl font-bold text-gray-900">Book an Appointment</h2>
+              <p className="mt-4 text-lg text-gray-600">Ready to take control of your health and wellness? We're here to help. Book an appointment today to start your journey to a better you.</p>
+            </div>
 
     <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
       <div className="bg-white shadow-md rounded-lg px-8 py-10">
-       <img src="/images/login-banner.png"  />             
+       <img src="/images/login-banner.png" alt="appointment" />             
       </div>
 
       <div className="bg-white shadow-md rounded-lg px-8 py-10">
@@ -123,7 +122,48 @@ export default function Home() {
       </div>
     </div>
   </div>
-</div>
+        </div>
+
+        <section className="section section-testimonial m-10">
+          <div class="container">
+      <h1 class="section-header text-4xl font-bold text-center m-4 mb-8">Testimonials</h1>
+      <div class="flex flex-wrap  justify-center">
+      <div class="lg:w-full pr-4 pl-4">
+      <div class="testimonial-slider">
+      <div className=" testimonial-item p-4">
+        <div className='testimonial-content '>
+         "The clinic staff were very friendly and professional. I felt well taken care of throughout my entire visit."
+          <p class="text-gray-600 font-semibold">- Jane Doe</p>
+        </div>
+        </div>
+        <div className=" testimonial-item p-4">
+        <div className='testimonial-content'>
+        "I had a great experience at the clinic. The doctor was very knowledgeable and made me feel comfortable during the entire procedure."
+          <p class="text-gray-600 font-semibold">- John Smith</p>
+        </div>
+        </div>
+        <div className=" testimonial-item p-4">
+        <div className='testimonial-content'>
+         "The clinic is very clean and well-maintained. I appreciate the attention to detail and the high level of professionalism exhibited by the staff."
+          <p class="text-gray-600 font-semibold">- Mary Johnson</p>
+        </div>
+        </div>
+        <div className=" testimonial-item p-4">
+        <div className='testimonial-content'>
+          "Amazing service, absolutely no wait and got some great help and information. Thank you!"
+          <p class="text-gray-600 font-semibold">- Brownie Christopher</p>
+        </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </section>
+
+    
+
+
+
 
 
         <section className="bg-white dark:bg-gray-900 px-10">
