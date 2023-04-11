@@ -98,7 +98,7 @@ export default function DoctorDashboard() {
 												</a>
 											</li>
 											<li>
-												<a href="/logout">
+												<a href="//logout">
 													<i className="fas fa-sign-out-alt"></i>
 													<span>Logout</span>
 												</a>
