@@ -128,62 +128,62 @@ useEffect(() => {
 							</div>
                 </div>
                 
-                <div class="md:w-3/5 pr-4 pl-4 lg:w-2/3 pr-4 pl-4 xl:w-3/4 pr-4 pl-4 py-2">
-                <div class="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
-                <div class="flex-auto p-6 ">
+                <div className="md:w-3/5 pr-4 pl-4 lg:w-2/3 pr-4 pl-4 xl:w-3/4 pr-4 pl-4 py-2">
+                <div className="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
+                <div className="flex-auto p-6 ">
  
                 <div className='appointments'>
-                    <div class="appointment-list">
-                    <div class="profile-info-widget">
-                    <a href="patient-profile.html" class="booking-doc-img">
+                    <div className="appointment-list">
+                    <div className="profile-info-widget">
+                    <a href="patient-profile.html" className="booking-doc-img">
                     <img src="/assets/img/patients/patient.jpg" alt="User Image"/>
                     </a>
-                    <div class="profile-det-info">
+                    <div className="profile-det-info">
                     <h3><a href="patient-profile.html">Richard Wilson</a></h3>
-                    <div class="patient-details">
-                    <h5><i class="far fa-clock"></i> 14 Nov 2019, 10.00 AM</h5>
-                    <h5><i class="fas fa-map-marker-alt"></i> cambridge,Ontario</h5>
-                    <h5><i class="fas fa-envelope"></i> richard@example.com</h5>
-                    <h5 class="mb-0"><i class="fas fa-phone"></i> +1 923 782 4575</h5>
+                    <div className="patient-details">
+                    <h5><i className="far fa-clock"></i> 14 Nov 2019, 10.00 AM</h5>
+                    <h5><i className="fas fa-map-marker-alt"></i> cambridge,Ontario</h5>
+                    <h5><i className="fas fa-envelope"></i> richard@example.com</h5>
+                    <h5 className="mb-0"><i className="fas fa-phone"></i> +1 923 782 4575</h5>
                     </div>
                     </div>
                     </div>
-                    <div class="appointment-action">
-                    <a href="#" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
-                    <i class="far fa-eye"></i> View
+                    <div className="appointment-action">
+                    <a href="#" className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
+                    <i className="far fa-eye"></i> View
                     </a>
-                    <a href="javascript:void(0);" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-success-light">
-                    <i class="fas fa-check"></i> Accept
+                    <a href="javascript:void(0);" className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-success-light">
+                    <i className="fas fa-check"></i> Accept
                     </a>
-                    <a href="javascript:void(0);" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-danger-light">
-                    <i class="fas fa-times"></i> Cancel
+                    <a href="javascript:void(0);" className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-danger-light">
+                    <i className="fas fa-times"></i> Cancel
                     </a>
                     </div>
                     </div>
-                    <div class="appointment-list">
-                    <div class="profile-info-widget">
-                    <a href="patient-profile.html" class="booking-doc-img">
+                    <div className="appointment-list">
+                    <div className="profile-info-widget">
+                    <a href="patient-profile.html" className="booking-doc-img">
                     <img src="/assets/img/patients/patient.jpg" alt="User Image"/>
                     </a>
-                    <div class="profile-det-info">
+                    <div className="profile-det-info">
                     <h3><a href="patient-profile.html">Richard Wilson</a></h3>
-                    <div class="patient-details">
-                    <h5><i class="far fa-clock"></i> 14 Nov 2019, 10.00 AM</h5>
-                    <h5><i class="fas fa-map-marker-alt"></i> cambridge,Ontario</h5>
-                    <h5><i class="fas fa-envelope"></i> richard@example.com</h5>
-                    <h5 class="mb-0"><i class="fas fa-phone"></i> +1 923 782 4575</h5>
+                    <div className="patient-details">
+                    <h5><i className="far fa-clock"></i> 14 Nov 2019, 10.00 AM</h5>
+                    <h5><i className="fas fa-map-marker-alt"></i> cambridge,Ontario</h5>
+                    <h5><i className="fas fa-envelope"></i> richard@example.com</h5>
+                    <h5 className="mb-0"><i className="fas fa-phone"></i> +1 923 782 4575</h5>
                     </div>
                     </div>
                     </div>
-                    <div class="appointment-action">
-                    <a href="#" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
-                    <i class="far fa-eye"></i> View
+                    <div className="appointment-action">
+                    <a href="#" className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
+                    <i className="far fa-eye"></i> View
                     </a>
-                    <a href="javascript:void(0);" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-success-light">
-                    <i class="fas fa-check"></i> Accept
+                    <a href="javascript:void(0);" className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-success-light">
+                    <i className="fas fa-check"></i> Accept
                     </a>
-                    <a href="javascript:void(0);" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-danger-light">
-                    <i class="fas fa-times"></i> Cancel
+                    <a href="javascript:void(0);" className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-danger-light">
+                    <i className="fas fa-times"></i> Cancel
                     </a>
                     </div>
                     </div>

@@ -130,12 +130,12 @@ useEffect(() => {
 							</div>
                 </div>
                 
-                <div class="md:w-3/5 pr-4 pl-4 lg:w-2/3 pr-4 pl-4 xl:w-3/4 pr-4 pl-4 py-2">
-                <div class="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
-                <div class="flex-auto p-6 card-table">
+                <div className="md:w-3/5 pr-4 pl-4 lg:w-2/3 pr-4 pl-4 xl:w-3/4 pr-4 pl-4 py-2">
+                <div className="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
+                <div className="flex-auto p-6 card-table">
 
-                <div class=" table-responsive block w-full overflow-auto scrolling-touch">
-                    <table class="table  mb-4 bg-transparent table-hover table-center mb-0">
+                <div className=" table-responsive block w-full overflow-auto scrolling-touch">
+                    <table className="table  mb-4 bg-transparent table-hover table-center mb-0">
                     <thead>
                     <tr>
                     <th>Invoice No</th>
@@ -151,22 +151,22 @@ useEffect(() => {
                     <a href="invoice-view">#INV-0010</a>
                     </td>
                     <td>
-                    <h2 class="table-avatar">
-                    <a href="patient-profile.html" class="avatar avatar-sm me-2">
-                    <img class="avatar-img rounded-full" src="/assets/img/patients/patient.jpg" alt="User Image"/>
+                    <h2 className="table-avatar">
+                    <a href="patient-profile.html" className="avatar avatar-sm me-2">
+                    <img className="avatar-img rounded-full" src="/assets/img/patients/patient.jpg" alt="User Image"/>
                     </a>
                     <a href="patient-profile.html">Richard Wilson <span>#PT0016</span></a>
                     </h2>
                     </td>
                     <td>$450</td>
                     <td>14 Nov 2019</td>
-                    <td class="text-end">
-                    <div class="table-action">
-                    <a href="invoice-view.html" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-info-light">
-                    <i class="far fa-eye"></i> View
+                    <td className="text-end">
+                    <div className="table-action">
+                    <a href="invoice-view.html" className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-info-light">
+                    <i className="far fa-eye"></i> View
                     </a>
-                    <a href="javascript:void(0);" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-primary-light">
-                    <i class="fas fa-print"></i> Print
+                    <a href="javascript:void(0);" className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-primary-light">
+                    <i className="fas fa-print"></i> Print
                     </a>
                     </div>
                     </td>
@@ -176,22 +176,22 @@ useEffect(() => {
                     <a href="invoice-view">#INV-0010</a>
                     </td>
                     <td >
-                    <h2 class="table-avatar">
-                    <a href="patient-profile.html" class="avatar avatar-sm me-2">
-                    <img class="avatar-img rounded-full" src="/assets/img/patients/patient.jpg" alt="User Image"/>
+                    <h2 className="table-avatar">
+                    <a href="patient-profile.html" className="avatar avatar-sm me-2">
+                    <img className="avatar-img rounded-full" src="/assets/img/patients/patient.jpg" alt="User Image"/>
                     </a>
                     <a href="patient-profile.html">Richard Wilson <span>#PT0016</span></a>
                     </h2>
                     </td>
                     <td>$450</td>
                     <td>14 Nov 2019</td>
-                    <td class="text-end">
-                    <div class="table-action">
-                    <a href="invoice-view.html" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-info-light">
-                    <i class="far fa-eye"></i> View
+                    <td className="text-end">
+                    <div className="table-action">
+                    <a href="invoice-view.html" className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-info-light">
+                    <i className="far fa-eye"></i> View
                     </a>
-                    <a href="javascript:void(0);" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-primary-light">
-                    <i class="fas fa-print"></i> Print
+                    <a href="javascript:void(0);" className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-primary-light">
+                    <i className="fas fa-print"></i> Print
                     </a>
                     </div>
                     </td>

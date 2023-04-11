@@ -128,86 +128,86 @@ useEffect(() => {
 							</div>
                 </div>
                 
-                <div class="md:w-3/5 pr-4 pl-4 lg:w-2/3 pr-4 pl-4 xl:w-3/4 pr-4 pl-4 py-2">
-                <div class="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
-                <div class="flex-auto p-6 ">
+                <div className="md:w-3/5 pr-4 pl-4 lg:w-2/3 pr-4 pl-4 xl:w-3/4 pr-4 pl-4 py-2">
+                <div className="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
+                <div className="flex-auto p-6 ">
 
                 <form>
-                <div class="flex flex-wrap  flex flex-wrap -mr-1 -ml-1 ">
-                <div class="w-full md:w-full pr-4 pl-4">
-                <div class="mb-4">
-                <div class="change-avatar">
-                <div class="profile-img">
+                <div className="flex flex-wrap  flex flex-wrap -mr-1 -ml-1 ">
+                <div className="w-full md:w-full pr-4 pl-4">
+                <div className="mb-4">
+                <div className="change-avatar">
+                <div className="profile-img">
                 <img src="/assets/img/doctors/doctor-thumb-02.jpg" alt="User Image"/>
                 </div>
-                <div class="upload-img">
-                <div class="change-photo-btn">
-                <span><i class="fa fa-upload"></i> Upload Photo</span>
-                <input type="file" class="upload"/>
+                <div className="upload-img">
+                <div className="change-photo-btn">
+                <span><i className="fa fa-upload"></i> Upload Photo</span>
+                <input type="file" className="upload"/>
                 </div>
-                <small class="block mt-1 text-gray-700">Allowed JPG, GIF or PNG. Max size of 2MB</small>
-                </div>
-                </div>
+                <small className="block mt-1 text-gray-700">Allowed JPG, GIF or PNG. Max size of 2MB</small>
                 </div>
                 </div>
-                <div class="md:w-1/2 pr-4 pl-4">
-                  <div class="mb-4">
-                  <label>Username <span class="text-red-600">*</span></label>
-                  <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" readonly=""/>
+                </div>
+                </div>
+                <div className="md:w-1/2 pr-4 pl-4">
+                  <div className="mb-4">
+                  <label>Username <span className="text-red-600">*</span></label>
+                  <input type="text" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" readonly=""/>
                   </div>
                   </div>
-                  <div class="md:w-1/2 pr-4 pl-4">
-                  <div class="mb-4">
-                  <label>Email <span class="text-red-600">*</span></label>
-                  <input type="email" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" readonly=""/>
+                  <div className="md:w-1/2 pr-4 pl-4">
+                  <div className="mb-4">
+                  <label>Email <span className="text-red-600">*</span></label>
+                  <input type="email" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" readonly=""/>
                   </div>
                   </div>
-                  <div class="md:w-1/2 pr-4 pl-4">
-                  <div class="mb-4">
-                  <label>First Name <span class="text-red-600">*</span></label>
-                  <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"/>
+                  <div className="md:w-1/2 pr-4 pl-4">
+                  <div className="mb-4">
+                  <label>First Name <span className="text-red-600">*</span></label>
+                  <input type="text" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"/>
                   </div>
                   </div>
-                  <div class="md:w-1/2 pr-4 pl-4">
-                  <div class="mb-4">
-                  <label>Last Name <span class="text-red-600">*</span></label>
-                  <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"/>
+                  <div className="md:w-1/2 pr-4 pl-4">
+                  <div className="mb-4">
+                  <label>Last Name <span className="text-red-600">*</span></label>
+                  <input type="text" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"/>
                   </div>
                   </div>
-                  <div class="md:w-1/2 pr-4 pl-4">
-                  <div class="mb-4">
+                  <div className="md:w-1/2 pr-4 pl-4">
+                  <div className="mb-4">
                   <label>Phone Number</label>
-                  <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"/>
+                  <input type="text" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"/>
                   </div>
                   </div>
-                  <div class="md:w-1/2 pr-4 pl-4">
-                  <div class="mb-4">
+                  <div className="md:w-1/2 pr-4 pl-4">
+                  <div className="mb-4">
                   <label>Gender</label>
-                  <select class=" block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded " >
+                  <select className=" block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded " >
                   <option >Select</option>
                   <option>Male</option>
                   <option>Female</option>
                   </select>
                   </div>
                   </div>
-                  <div class="md:w-1/2 pr-4 pl-4">
-                  <div class="mb-4 mb-0">
+                  <div className="md:w-1/2 pr-4 pl-4">
+                  <div className="mb-4 mb-0">
                   <label>Date of Birth</label>
-                  <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"/>
+                  <input type="text" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"/>
                   </div>
                   </div>
                   </div>
-                  <div class="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
-                  <div class="flex-auto p-6">
-                  <h4 class="mb-3">About Me</h4>
-                  <div class="mb-4 mb-0">
+                  <div className="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
+                  <div className="flex-auto p-6">
+                  <h4 className="mb-3">About Me</h4>
+                  <div className="mb-4 mb-0">
                   <label>Biography</label>
-                  <textarea class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" rows="5"></textarea>
+                  <textarea className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" rows="5"></textarea>
                   </div>
                   </div>
                   </div>
-                  <div class="submit-section mt-4">
-                  <button type="submit" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600 submit-btn">Save Changes</button>
+                  <div className="submit-section mt-4">
+                  <button type="submit" className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600 submit-btn">Save Changes</button>
                   </div>
                 </form>
 

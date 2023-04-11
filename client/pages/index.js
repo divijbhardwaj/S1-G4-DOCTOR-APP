@@ -28,7 +28,7 @@ export default function Home() {
               <a href="#" className="group flex gap-4">
                 <div className="w-10 md:w-12 h-10 md:h-12 flex justify-center items-center shrink-0 bg-blue-500 group-hover:bg-indigo-600 group-active:bg-indigo-700 text-white rounded-lg shadow-lg transition duration-100">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
 
@@ -41,7 +41,7 @@ export default function Home() {
               <a href="#" className="group flex gap-4">
                 <div className="w-10 md:w-12 h-10 md:h-12 flex justify-center items-center shrink-0 bg-blue-500 group-hover:bg-indigo-600 group-active:bg-indigo-700 text-white rounded-lg shadow-lg transition duration-100">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                 </div>
 
@@ -54,7 +54,7 @@ export default function Home() {
               <a href="#" className="group flex gap-4">
                 <div className="w-10 md:w-12 h-10 md:h-12 flex justify-center items-center shrink-0 bg-blue-500 group-hover:bg-indigo-600 group-active:bg-indigo-700 text-white rounded-lg shadow-lg transition duration-100">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                   </svg>
                 </div>
 
@@ -125,33 +125,33 @@ export default function Home() {
         </div>
 
         <section className="section section-testimonial m-10">
-          <div class="container">
-      <h1 class="section-header text-4xl font-bold text-center m-4 mb-8">Testimonials</h1>
-      <div class="flex flex-wrap  justify-center">
-      <div class="lg:w-full pr-4 pl-4">
-      <div class="testimonial-slider">
+          <div className="container">
+      <h1 className="section-header text-4xl font-bold text-center m-4 mb-8">Testimonials</h1>
+      <div className="flex flex-wrap  justify-center">
+      <div className="lg:w-full pr-4 pl-4">
+      <div className="testimonial-slider">
       <div className=" testimonial-item p-4">
         <div className='testimonial-content '>
          "The clinic staff were very friendly and professional. I felt well taken care of throughout my entire visit."
-          <p class="text-gray-600 font-semibold">- Jane Doe</p>
+          <p className="text-gray-600 font-semibold">- Jane Doe</p>
         </div>
         </div>
         <div className=" testimonial-item p-4">
         <div className='testimonial-content'>
         "I had a great experience at the clinic. The doctor was very knowledgeable and made me feel comfortable during the entire procedure."
-          <p class="text-gray-600 font-semibold">- John Smith</p>
+          <p className="text-gray-600 font-semibold">- John Smith</p>
         </div>
         </div>
         <div className=" testimonial-item p-4">
         <div className='testimonial-content'>
          "The clinic is very clean and well-maintained. I appreciate the attention to detail and the high level of professionalism exhibited by the staff."
-          <p class="text-gray-600 font-semibold">- Mary Johnson</p>
+          <p className="text-gray-600 font-semibold">- Mary Johnson</p>
         </div>
         </div>
         <div className=" testimonial-item p-4">
         <div className='testimonial-content'>
           "Amazing service, absolutely no wait and got some great help and information. Thank you!"
-          <p class="text-gray-600 font-semibold">- Brownie Christopher</p>
+          <p className="text-gray-600 font-semibold">- Brownie Christopher</p>
         </div>
         </div>
       </div>

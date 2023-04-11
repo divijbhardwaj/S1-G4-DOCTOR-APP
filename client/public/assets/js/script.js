@@ -103,7 +103,7 @@
 	
 	// Mobile menu sidebar overlay
 	
-	$('body').append('<div class="sidebar-overlay"></div>');
+	$('body').append('<div className="sidebar-overlay"></div>');
 	$(document).on('click', '#mobile_btn', function() {
 		$('main-wrapper').toggleClass('slide-nav');
 		$('.sidebar-overlay').toggleClass('opened');
@@ -146,13 +146,13 @@
 
     $(".add-hours").on('click', function () {
 		
-		var hourscontent = '<div class="row form-row hours-cont">' +
-			'<div class="col-12 col-md-10">' +
-				'<div class="row form-row">' +
-					'<div class="col-12 col-md-6">' +
-						'<div class="form-group">' +
+		var hourscontent = '<div className="row form-row hours-cont">' +
+			'<div className="col-12 col-md-10">' +
+				'<div className="row form-row">' +
+					'<div className="col-12 col-md-6">' +
+						'<div className="form-group">' +
 							'<label>Start Time</label>' +
-							'<select class="form-select form-control">' +
+							'<select className="form-select form-control">' +
 								'<option>-</option>' +
 								'<option>12.00 am</option>' +
 								'<option>12.30 am</option>' + 
@@ -161,10 +161,10 @@
 							'</select>' +
 						'</div>' +
 					'</div>' +
-					'<div class="col-12 col-md-6">' +
-						'<div class="form-group">' +
+					'<div className="col-12 col-md-6">' +
+						'<div className="form-group">' +
 							'<label>End Time</label>' +
-							'<select class="form-select form-control">' +
+							'<select className="form-select form-control">' +
 								'<option>-</option>' +
 								'<option>12.00 am</option>' +
 								'<option>12.30 am</option>' +
@@ -175,7 +175,7 @@
 					'</div>' +
 				'</div>' +
 			'</div>' +
-			'<div class="col-12 col-md-2"><label class="d-md-block d-sm-none d-none">&nbsp;</label><a href="#" class="btn btn-danger trash"><i class="far fa-trash-alt"></i></a></div>' +
+			'<div className="col-12 col-md-2"><label className="d-md-block d-sm-none d-none">&nbsp;</label><a href="#" className="btn btn-danger trash"><i className="far fa-trash-alt"></i></a></div>' +
 		'</div>';
 		
         $(".hours-info").append(hourscontent);
@@ -282,7 +282,7 @@
 	        nav: true,
 	        loop: true,
 			navContainer: '.slide-nav-10',
-			navText: [ '<i class="fas fa-caret-left"></i>', '<i class="fas fa-caret-right"></i>' ], 
+			navText: [ '<i className="fas fa-caret-left"></i>', '<i className="fas fa-caret-right"></i>' ], 
 	        responsive: {
 	          	0: {
 	            	items: 1
@@ -304,7 +304,7 @@
 	        nav: true,
 	        loop: true,
 			navContainer: '.slide-nav-9',
-			navText: [ '<i class="fas fa-caret-left"></i>', '<i class="fas fa-caret-right"></i>' ], 
+			navText: [ '<i className="fas fa-caret-left"></i>', '<i className="fas fa-caret-right"></i>' ], 
 	        responsive: {
 	          	0: {
 	            	items: 1
@@ -782,7 +782,7 @@
 			dots: false,
 			nav:true,
 			navContainer: '.slide-nav-1',
-			navText: [ '<i class="fas fa-chevron-left custom-arrow"></i>', '<i class="fas fa-chevron-right custom-arrow"></i>' ], 
+			navText: [ '<i className="fas fa-chevron-left custom-arrow"></i>', '<i className="fas fa-chevron-right custom-arrow"></i>' ], 
 			responsive:{
 				0:{
 					items:1
@@ -810,7 +810,7 @@
 			dots: false,
 			nav:true,
 			navContainer: '.slide-nav-2',
-			navText: [ '<i class="fas fa-chevron-left custom-arrow"></i>', '<i class="fas fa-chevron-right custom-arrow"></i>' ], 
+			navText: [ '<i className="fas fa-chevron-left custom-arrow"></i>', '<i className="fas fa-chevron-right custom-arrow"></i>' ], 
 			responsive:{
 				0:{
 					items:1
@@ -838,7 +838,7 @@
 			dots: false,
 			nav:true,
 			navContainer: '.slide-nav-3',
-			navText: [ '<i class="fas fa-chevron-left custom-arrow"></i>', '<i class="fas fa-chevron-right custom-arrow"></i>' ], 
+			navText: [ '<i className="fas fa-chevron-left custom-arrow"></i>', '<i className="fas fa-chevron-right custom-arrow"></i>' ], 
 			responsive:{
 				0:{
 					items:1
@@ -865,7 +865,7 @@
 			dots: false,
 			nav:true,
 			navContainer: '.slide-nav-4',
-			navText: [ '<i class="fas fa-chevron-left custom-arrow"></i>', '<i class="fas fa-chevron-right custom-arrow"></i>' ], 
+			navText: [ '<i className="fas fa-chevron-left custom-arrow"></i>', '<i className="fas fa-chevron-right custom-arrow"></i>' ], 
 			responsive:{
 				0:{
 					items:1
@@ -1420,7 +1420,7 @@
 			dots: false,
 			nav:true,
 			navContainer: '.slide-nav-5',
-			navText: [ '<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>' ], 
+			navText: [ '<i className="fas fa-chevron-left"></i>', '<i className="fas fa-chevron-right"></i>' ], 
 			responsive:{
 				0:{
 					items:1
@@ -1450,7 +1450,7 @@
 			dots: false,
 			nav:true,
 			navContainer: '.slide-nav-6',
-			navText: [ '<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>' ], 
+			navText: [ '<i className="fas fa-chevron-left"></i>', '<i className="fas fa-chevron-right"></i>' ], 
 			responsive:{
 				0:{
 					items:1
@@ -1534,7 +1534,7 @@
 			dots: false,
 			nav:true,
 			navContainer: '.slide-nav-7',
-			navText: [ '<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>' ], 
+			navText: [ '<i className="fas fa-chevron-left"></i>', '<i className="fas fa-chevron-right"></i>' ], 
 			responsive:{
 				0:{
 					items:1
@@ -1600,7 +1600,7 @@
 			dots: false,
 			nav:true,
 			navContainer: '.slide-nav-8',
-			navText: [ '<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>' ], 
+			navText: [ '<i className="fas fa-chevron-left"></i>', '<i className="fas fa-chevron-right"></i>' ], 
 			responsive:{
 				0:{
 					items:1
