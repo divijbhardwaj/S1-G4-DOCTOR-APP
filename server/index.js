@@ -49,6 +49,9 @@ app.get('/get-appointments', async(req, res) => {
 
 app.get('/report', async(req, res) => {
   const _id = req.query.id;
+  if(!_id) {
+    return new Error('no ID');
+  }
   const [details] = await Patient.find({_id});
   const {desc: illnessDesc, report} = details;
   if(report) {
@@ -58,7 +61,22 @@ app.get('/report', async(req, res) => {
     model:"gpt-3.5-turbo",
     messages:[
       {"role": "system", "content": "Generate a doctors report based on the patient illness"},
-      {"role": "user", "content": `Following is the illness: ${illnessDesc}`}
+      {"role": "user", "content": `Following is the illness: ${illnessDesc}.
+      Use the following as template
+      Doctor's Report:
+      Patient name:
+      Age:
+      Gender:
+      Chief Complaint:
+      Medical History:
+      Physical Examination:
+      Diagnostic Tests:
+      Diagnosis:
+      Treatment:
+      Follow-up:
+      Overall Impression:
+      Signed by:
+      `}
     ]
   });
   const r = response.data.choices;
