@@ -7,10 +7,21 @@ import Layout from '@/pages/layout';
 export default function Register() {
   const router = useRouter();
 
-  const createUser = (email, pass) => {
+  const storeInMongo = async(fName, lName, number, email) => {
+    console.log(fName, lName, number, email)
+    await fetch('http://localhost:3009/register', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({fName, lName, number, email}),
+    });
+  }
+  const createUser = (email, pass, fName, lName, number) => {
     createUserWithEmailAndPassword(fAuth, email, pass)
     .then((userCredential) => {
       verifyEmail(email);
+      storeInMongo(fName, lName, number, email);
       router.push('/register/verify')
     })
     .catch((error) => {
@@ -38,7 +49,7 @@ function handleSubmit (e) {
   }
   console.log(fields)
   if(validateForm(fields)) {
-    createUser(fields.email, fields.pass)
+    createUser(fields.email, fields.pass, e.target.fName.value, e.target.lName.value, e.target.number.value)
   }
 }
 
@@ -63,8 +74,20 @@ function validateForm (fields) {
                     </h1>
                     <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                         <div>
+                            <label htmlFor="fName" className="block mb-2 text-sm font-medium text-gray-900 light:text-white">First Name</label>
+                            <input type="text" name="fName" id="fName" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400 light:text-white light:focus:ring-blue-500 light:focus:border-blue-500" placeholder="John" required/>
+                        </div>
+                        <div>
+                            <label htmlFor="lName" className="block mb-2 text-sm font-medium text-gray-900 light:text-white">Last Name</label>
+                            <input type="text" name="lName" id="lName" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400 light:text-white light:focus:ring-blue-500 light:focus:border-blue-500" placeholder="Doe" required/>
+                        </div>
+                        <div>
                             <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 light:text-white">Your email</label>
                             <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400 light:text-white light:focus:ring-blue-500 light:focus:border-blue-500" placeholder="name@domain.com" required/>
+                        </div>
+                        <div>
+                            <label htmlFor="number" className="block mb-2 text-sm font-medium text-gray-900 light:text-white">Your Number</label>
+                            <input type="number" name="number" id="number" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400 light:text-white light:focus:ring-blue-500 light:focus:border-blue-500" placeholder="911******" required/>
                         </div>
                         <div>
                             <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 light:text-white">Password</label>

@@ -3,12 +3,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const { Configuration, OpenAIApi } = require("openai");
+const Patient = require('./model/patient.js');
+const User = require('./model/user.js');
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
-const Patient = require('./model/patient.js');
 const app = express()
 const port = 3009
 
@@ -35,6 +36,11 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.post('/register', async (req, res) => {
+  const r = await User.create(req.body);
+  res.json(r);
+})
+
 app.post('/book-appointment', async (req, res) => {
   const r = await Patient.create(req.body);
   res.json(r);
@@ -53,29 +59,30 @@ app.get('/report', async(req, res) => {
     return new Error('no ID');
   }
   const [details] = await Patient.find({_id});
-  const {desc: illnessDesc, report} = details;
+  const {desc: illnessDesc, report, email} = details;
   if(report) {
     return res.json({report});
   }
+  const [u] = await User.find({email});
+ 
   const response = await openai.createChatCompletion({
     model:"gpt-3.5-turbo",
     messages:[
       {"role": "system", "content": "Generate a doctors report based on the patient illness"},
+      {"role": "user", "content": `Following is the Patient Details.
+        First Name: ${u.fName}
+        Last Name: ${u.lName}
+      `},
       {"role": "user", "content": `Following is the illness: ${illnessDesc}.
       Use the following as template
-      Doctor's Report:
       Patient name:
-      Age:
-      Gender:
       Chief Complaint:
-      Medical History:
       Physical Examination:
       Diagnostic Tests:
       Diagnosis:
       Treatment:
       Follow-up:
       Overall Impression:
-      Signed by:
       `}
     ]
   });

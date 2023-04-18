@@ -1,13 +1,17 @@
 import Layout from '@/pages/layout';
+import fAuth from '@/plugins/firebase'
+import { useEffect, useState } from 'react';
+import {onAuthStateChanged} from "firebase/auth";
 
 export default function Appointment() {
+  const [userData, setUserData] = useState({});
   async function onSubmit(e) {
     e.preventDefault();
     const form = e.target;
     const data = {
-      name: form.name.value,
-      number: form.phone.value,
-      email: form.email.value,
+      // name: form.name.value,
+      // number: form.phone.value,
+      email: userData.email,
       date: form.date.value,
       time: form.time.value,
       area: form.area.value,
@@ -17,20 +21,23 @@ export default function Appointment() {
       desc: form.message.value
     }
 
-    const response = await fetch('http://localhost:3009/book-appointment', {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+  await fetch('http://localhost:3009/book-appointment', {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
 
-    alert('appoinment booked');
+  alert('appoinment booked');
+  window.location.href = '/dashboard/patient'
+}
 
-
-    // console.log(response);
-
-  }
+useEffect(() => {
+  onAuthStateChanged(fAuth, (user) => {
+    setUserData(user)
+  });
+}, [])
   return (<>
     <Layout>
     <div className="breadcrumb-bar">
@@ -52,7 +59,7 @@ export default function Appointment() {
         <div className="mx-auto w-full max-w-[550px]">
           <h2 className="text-3xl font-bold text-gray-900 m-10">Book an Appointment</h2>
           <form onSubmit={onSubmit}>
-            <div className="mb-5">
+            {/* <div className="mb-5">
               <label
                 htmlFor="name"
                 className="mb-3 block text-base font-medium text-[#07074D]"
@@ -66,8 +73,8 @@ export default function Appointment() {
                 placeholder="Full Name"
                 className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               />
-            </div>
-            <div className="mb-5">
+            </div> */}
+            {/* <div className="mb-5">
               <label
                 htmlFor="phone"
                 className="mb-3 block text-base font-medium text-[#07074D]"
@@ -81,22 +88,7 @@ export default function Appointment() {
                 placeholder="Enter your phone number"
                 className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               />
-            </div>
-            <div className="mb-5">
-              <label
-                htmlFor="email"
-                className="mb-3 block text-base font-medium text-[#07074D]"
-              >
-                Email Address
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email"
-                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-              />
-            </div>
+            </div> */}
             <div className="-mx-3 flex flex-wrap">
               <div className="w-full px-3 sm:w-1/2">
                 <div className="mb-5">
@@ -107,6 +99,7 @@ export default function Appointment() {
                     Date
                   </label>
                   <input
+                    required
                     type="date"
                     name="date"
                     id="date"
@@ -123,6 +116,7 @@ export default function Appointment() {
                     Time
                   </label>
                   <input
+                    required
                     type="time"
                     name="time"
                     id="time"
@@ -142,6 +136,7 @@ export default function Appointment() {
                 <div className="w-full px-3 sm:w-1/2">
                   <div className="mb-5">
                     <input
+                      required
                       type="text"
                       name="area"
                       id="area"
@@ -153,6 +148,7 @@ export default function Appointment() {
                 <div className="w-full px-3 sm:w-1/2">
                   <div className="mb-5">
                     <input
+                      required
                       type="text"
                       name="city"
                       id="city"
@@ -164,6 +160,7 @@ export default function Appointment() {
                 <div className="w-full px-3 sm:w-1/2">
                   <div className="mb-5">
                     <input
+                      required
                       type="text"
                       name="state"
                       id="state"
@@ -175,6 +172,7 @@ export default function Appointment() {
                 <div className="w-full px-3 sm:w-1/2">
                   <div className="mb-5">
                     <input
+                      required
                       type="text"
                       name="post-code"
                       id="post-code"

@@ -1,10 +1,5 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
 import Layout from '@/pages/layout';
 import { useEffect, useState } from 'react';
-const inter = Inter({ subsets: ['latin'] })
 
 export default function PatientDashboard() {
 
@@ -142,7 +137,7 @@ useEffect(() => {
                                 <table className=" table table-hover table-center mb-0 w-full max-w-full  ">
                                   <thead>
                                     <tr>
-                                      <th>Doctor</th>
+                                      {/* <th>Doctor</th> */}
                                       <th>Appt Date</th>
                                       <th>Booking Date</th>
                                       <th>Amount</th>
@@ -156,21 +151,21 @@ useEffect(() => {
                                     { appoinmentData.length ?
                                       appoinmentData.map((d,i) => 
                                         <tr key={i}>
-                                          <td>
+                                          {/* <td>
                                             <h2 className="table-avatar">
                                               <a href="#" className="avatar avatar-sm mr-2">
                                                 <img className="avatar-img rounded-full" src="/assets/img/doctors/doctor-thumb-01.jpg" alt="User Image"/>
                                               </a>
                                               <a href="#">{d.name} <span>Dentist</span></a>
                                             </h2>
-                                          </td>
+                                          </td> */}
                                           <td>{(new Date(d.date)).toLocaleDateString("en-US")} <span className="block text-teal-500">{d.time}</span></td>
                                           <td>{(new Date(d.date)).toLocaleDateString("en-US")}</td>
                                           <td>$160</td>
                                           <td>16 Nov 2019</td>
                                           <td><span className={`inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded rounded-full py-1 px-3 ${d.report ? 'bg-success-light' : 'bg-warning-light'}`}>{d.report? 'Complete' : 'Pending'}</span></td>
                                           <td>
-                                            <a href={`/report?id=${d._id}`}>{d.report? 'View Report' : 'Request Report'}</a>
+                                            <a className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' href={`/report?id=${d._id}`}>{d.report? 'View' : 'Request'}</a>
                                           </td>
                                         </tr> 
                                       ): <></>

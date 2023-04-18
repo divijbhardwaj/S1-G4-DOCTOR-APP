@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import {onAuthStateChanged} from "firebase/auth";
 import fAuth from '@/plugins/firebase'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'
 
 // const auth = getAuth();
@@ -9,10 +9,11 @@ import { useRouter } from 'next/router'
 
 const Layout = ({ children }) => {
   const route = useRouter();
+  const [userData, setUserData] = useState({});
 useEffect(() => {
   onAuthStateChanged(fAuth, (user) => {
-    if (user || ['/login', '/'].includes(route.pathname)) {
-      // console.log(user)
+    if (user || ['/login', '/register', '/'].includes(route.pathname)) {
+      setUserData(user);
     } else {
       // User is signed out
       // ...
@@ -40,7 +41,7 @@ useEffect(() => {
         
       </Head>
      
-    <header className="leading-[3rem]">
+    <header className="leading-[3rem] relative z-50">
         <nav className="bg-white  BG-PO border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
             <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <a href="/" className="flex items-center">
@@ -82,7 +83,7 @@ useEffect(() => {
     </header>
     
       <main>{children}</main>
-      <footer className="footer">
+      <footer className="footer relative z-50">
 				
 				
 				<div className="footer-top">

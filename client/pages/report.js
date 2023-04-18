@@ -13,8 +13,9 @@ export default function Report() {
       method: "GET"
     });
     const report = await response.json()
-    console.log(report);
-    setReport(report)
+    const r = report.report.split('\n\n')
+
+    setReport(r)
   }
 
   useEffect(() => {
@@ -46,7 +47,7 @@ export default function Report() {
             <span class="sr-only">Loading...</span>
           </div> : 
                     <div className="">
-                    {JSON.stringify(report)}
+                    {report.map((e, i) => <p key={i}>{e}</p>)}
                   </div>
           }
         </div>
