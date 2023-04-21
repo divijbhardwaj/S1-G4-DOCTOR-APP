@@ -115,7 +115,7 @@ useEffect(() => {
                           <li>
                             <a className="inline-block py-2 px-4 no-underline active" href="#pat_appointments" data-toggle="tab">Appointments</a>
                           </li>
-                          <li>
+                          {/* <li>
                             <a className="inline-block py-2 px-4 no-underline" href="#pat_prescriptions" data-toggle="tab">Prescriptions</a>
                           </li>
                           <li >
@@ -123,7 +123,7 @@ useEffect(() => {
                           </li>
                           <li >
                             <a className="inline-block py-2 px-4 no-underline" href="#pat_billing" data-toggle="tab">Billing</a>
-                          </li>
+                          </li> */}
                         </ul>
                       </nav>
                       

@@ -86,18 +86,6 @@ useEffect(() => {
 													<span>Appointments</span>
 												</a>
 											</li>
-											<li>
-												<a href="#">
-													<i className="fas fa-user-injured"></i>
-													<span>My Patients</span>
-												</a>
-											</li>
-											<li>
-												<a href="#">
-													<i className="fas fa-hourglass-start"></i>
-													<span>Schedule Timings</span>
-												</a>
-											</li>
 											<li className="active">
 												<a href="/dashboard/doctor/invoices">
 													<i className="fas fa-file-invoice"></i>
